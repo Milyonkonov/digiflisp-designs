@@ -1,0 +1,11 @@
+#SetMemory  20=F0
+#SetMemory  21=03
+#SetMemory  22=08
+#SetMemory  23=E1
+#SetMemory  24=10
+#SetMemory  25=25
+#SetMemory  26=F9
+#SetMemory  27=33
+#SetMemory  28=22
+
+#SetMemory  FF=20

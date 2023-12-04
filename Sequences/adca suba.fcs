@@ -1,0 +1,32 @@
+
+:I94Q4|SUBA #Data (immediate)|
+
+%LDT	=I94*Q4
+%INCPC	=I94*Q4
+%MR	=I94*Q4
+%LDR	=I94*Q5
+%LDCC	=I94*Q5
+%OEA	=I94*Q5
+%F3	=I94*Q5
+%F2	=I94*Q5
+%G0	=I94*Q5
+:I94Q6|SUBA #Data (immediate)|
+
+%LDA	=I94*Q6
+%OER	=I94*Q6
+%NF	=I94*Q6
+:I95Q4|ADCA #Data (immediate)|
+
+%LDT	=I95*Q4
+%INCPC	=I95*Q4
+%MR	=I95*Q4
+%LDR	=I95*Q5
+%LDCC	=I95*Q5
+%OEA	=I95*Q5
+%F3	=I95*Q5
+%F1	=I95*Q5
+%F0	=I95*Q5
+%G11	=I95*Q5
+%LDA	=I95*Q6
+%OER	=I95*Q6
+%NF	=I95*Q6
