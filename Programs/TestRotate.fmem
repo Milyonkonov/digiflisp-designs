@@ -1,0 +1,12 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.2
+(c) GMV 1989-2022
+File: TestRotate.fmem
+
+ # ClearAllMemory
+ # ClearAllRegisters
+ #setMemory  20=F0
+ #setMemory  21=21
+ #setMemory  22=0D
+ #setMemory  23=33
+ #setMemory  24=22
+ #setMemory  FF=20

@@ -1,0 +1,36 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.2
+(c) GMV 1989-2022
+
+
+File: Lab_4-3B.lst
+FB                      1. OUTPORT:	EQU	$FB
+---- File: "Lab_4-3B.sflisp"
+FC                      2. INPORT:		EQU	$FC
+                        3. 
+00                      4. 		ORG	$00
+00 00                   5. STATE_INDEX:	FCB	0
+01 05 06 0A 09          6. STATE_VECTOR:	FCB	$05,$06,$0A,$09
+                        7. 
+20                      8. START:		ORG 	$20
+20 90 01                9. 		LDX	#STATE_VECTOR
+22 F1 FC               10. LOOP:		LDA	INPORT
+24 07                  11. 		INCA				;INCA ANNARS ÄR EN DELAY AV 0 EGENTLIGEN EN DELAY AV FF
+25 34 32               12. 		JSR	DELAY
+27 F1 00               13. 		LDA	STATE_INDEX
+29 F4                  14. 		LDA	A,X
+2A E1 FB               15. 		STA	OUTPORT
+2C 34 36               16. 		JSR	NEXTSTATE
+2E E1 00               17. 		STA	STATE_INDEX
+30 21 F0               18. 		BRA	LOOP
+                       19. 
+32 08                  20. DELAY:	DECA
+33 25 FD               21. 	BNE DELAY
+35 43                  22. 	RTS
+                       23. 
+36 37 00               24. NEXTSTATE:	INC	STATE_INDEX
+38 F1 00               25. 		LDA	STATE_INDEX
+3A 99 03               26. 		ANDA	#3
+3C 43                  27. 		RTS
+                       28. 
+FF                     29. 		ORG	$FF
+FF 20                  30. 		FCB	START

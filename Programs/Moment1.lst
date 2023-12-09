@@ -1,0 +1,11 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.2
+(c) GMV 1989-2022
+
+
+File: Moment1.lst
+20                      1. 	ORG 	$20
+---- File: "Moment1.sflisp"
+20 F0 44                2. 	LDA 	#$44
+22 94 01                3. LOOP:	SUBA	#1
+24 E1 05                4. 	STA	$5
+26 21 FA                5. 	BRA	LOOP

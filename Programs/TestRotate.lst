@@ -1,0 +1,13 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.2
+(c) GMV 1989-2022
+
+
+File: TestRotate.lst
+20                      1. START:	ORG	$20
+---- File: "TestRotate.sflisp"
+20 F0 21                2. 	LDA	#%00100001
+22 0D                   3. SHITF:	ROLA
+23 33 22                4. 	JMP 	SHITF
+                        5. 
+FF                      6. 	ORG	$FF
+FF 20                   7. 	FCB	START
